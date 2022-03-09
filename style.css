@@ -1,0 +1,179 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --fs-body: 1.1rem;
+    --clr-text-primary: hsl(215, 51%, 70%);
+    /* soft blue  */
+    --clr-text-hover: hsl(178, 100%, 50%);
+    /* Cyan */
+    --clr-container-bg: hsl(217, 54%, 11%);
+    /*Very Dark blue*/
+    --clr-card-bg: hsl(216, 50%, 16%);
+    /*Very Dark blue*/
+    --clr-card-line: hsl(215, 32%, 27%);
+    /*Very Dark blue*/
+    --clr-text-white: hsl(0, 0%, 100%);
+    /*Text White*/
+    --ff-primary: 'Outfit', sans-serif;
+    --fw-light: 300;
+    --fw-medium: 400;
+    --fw-bold: 600;
+}
+
+
+/* TYPOGRAPHY */
+
+.heading {
+    color: var(--clr-text-white);
+    font-weight: var(--fw-bold);
+    font-size: 1.2rem;
+}
+
+p {
+    color: var(--clr-text-primary);
+    font-weight: var(--fw-light);
+}
+
+.small-text {
+    font-size: 0.98rem;
+    color: var(--clr-text-primary);
+}
+
+.highlight {
+    color: var(--clr-text-hover);
+}
+
+
+/* GENERAL STYLING  */
+
+body {
+    font-size: var(--fs-body);
+    font-weight: var(--fw-medium);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    letter-spacing: 0.5px;
+    word-spacing: 1.3px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-container-bg);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.line {
+    background-color: var(--clr-card-line);
+    height: 1px;
+    margin-top: 0.35em;
+    margin-bottom: 0.4em;
+}
+
+
+/* Designing Card  */
+
+.card {
+    width: 320px;
+    border-radius: 0.80rem;
+    padding: 1em;
+    background-color: var(--clr-card-bg);
+}
+
+.card-container {
+    position: relative;
+}
+
+.card-main-img {
+    height: 270px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1em;
+}
+
+.flex-row {
+    align-items: center;
+}
+
+.flex-row-child {
+    width: 50%;
+}
+
+.flex-start {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-end {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.flex-row-child img {
+    height: 18px;
+    margin-right: 0.25em;
+}
+
+.card-profile-image {
+    height: 30px;
+    margin-right: 0.80em;
+    border: 1px solid var(--clr-text-white);
+    border-radius: 100rem;
+}
+
+.text-white {
+    color: var(--clr-text-white);
+    font-weight: var(--fw-medium);
+}
+
+
+/* HOVER EFFECTS  */
+
+.heading:hover,
+.text-white:hover {
+    color: var(--clr-text-hover);
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    border-radius: 0.80rem;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+
+.card-container:hover .overlay {
+    opacity: 0.8;
+}
+
+.overlay img {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
